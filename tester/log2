@@ -1,0 +1,67 @@
+test.cpp: In function ‘int main(int, char**)’:
+test.cpp:349:25: error: ‘SYS_accept’ was not declared in this scope
+ sys_n2v["SYS_accept"] = SYS_accept;
+                         ^~~~~~~~~~
+test.cpp:351:29: error: ‘SYS_arch_prctl’ was not declared in this scope
+ sys_n2v["SYS_arch_prctl"] = SYS_arch_prctl;
+                             ^~~~~~~~~~~~~~
+test.cpp:354:32: error: ‘SYS_epoll_ctl_old’ was not declared in this scope
+ sys_n2v["SYS_epoll_ctl_old"] = SYS_epoll_ctl_old;
+                                ^~~~~~~~~~~~~~~~~
+test.cpp:355:33: error: ‘SYS_epoll_wait_old’ was not declared in this scope
+ sys_n2v["SYS_epoll_wait_old"] = SYS_epoll_wait_old;
+                                 ^~~~~~~~~~~~~~~~~~
+test.cpp:360:25: error: ‘SYS_msgctl’ was not declared in this scope
+ sys_n2v["SYS_msgctl"] = SYS_msgctl;
+                         ^~~~~~~~~~
+test.cpp:361:25: error: ‘SYS_msgget’ was not declared in this scope
+ sys_n2v["SYS_msgget"] = SYS_msgget;
+                         ^~~~~~~~~~
+test.cpp:362:25: error: ‘SYS_msgrcv’ was not declared in this scope
+ sys_n2v["SYS_msgrcv"] = SYS_msgrcv;
+                         ^~~~~~~~~~
+test.cpp:363:25: error: ‘SYS_msgsnd’ was not declared in this scope
+ sys_n2v["SYS_msgsnd"] = SYS_msgsnd;
+                         ^~~~~~~~~~
+test.cpp:364:29: error: ‘SYS_newfstatat’ was not declared in this scope
+ sys_n2v["SYS_newfstatat"] = SYS_newfstatat;
+                             ^~~~~~~~~~~~~~
+test.cpp:367:27: error: ‘SYS_security’ was not declared in this scope
+ sys_n2v["SYS_security"] = SYS_security;
+                           ^~~~~~~~~~~~
+test.cpp:368:25: error: ‘SYS_semctl’ was not declared in this scope
+ sys_n2v["SYS_semctl"] = SYS_semctl;
+                         ^~~~~~~~~~
+test.cpp:369:25: error: ‘SYS_semget’ was not declared in this scope
+ sys_n2v["SYS_semget"] = SYS_semget;
+                         ^~~~~~~~~~
+test.cpp:370:24: error: ‘SYS_semop’ was not declared in this scope
+ sys_n2v["SYS_semop"] = SYS_semop;
+                        ^~~~~~~~~
+test.cpp:371:29: error: ‘SYS_semtimedop’ was not declared in this scope
+ sys_n2v["SYS_semtimedop"] = SYS_semtimedop;
+                             ^~~~~~~~~~~~~~
+test.cpp:375:24: error: ‘SYS_shmat’ was not declared in this scope
+ sys_n2v["SYS_shmat"] = SYS_shmat;
+                        ^~~~~~~~~
+test.cpp:376:25: error: ‘SYS_shmctl’ was not declared in this scope
+ sys_n2v["SYS_shmctl"] = SYS_shmctl;
+                         ^~~~~~~~~~
+test.cpp:377:24: error: ‘SYS_shmdt’ was not declared in this scope
+ sys_n2v["SYS_shmdt"] = SYS_shmdt;
+                        ^~~~~~~~~
+test.cpp:378:25: error: ‘SYS_shmget’ was not declared in this scope
+ sys_n2v["SYS_shmget"] = SYS_shmget;
+                         ^~~~~~~~~~
+test.cpp:382:26: error: ‘SYS_tuxcall’ was not declared in this scope
+ sys_n2v["SYS_tuxcall"] = SYS_tuxcall;
+                          ^~~~~~~~~~~
+test.cpp:641:57: error: ‘ORIG_RAX’ was not declared in this scope
+           orig_eax = ptrace(PTRACE_PEEKUSER, child, 8 * ORIG_RAX, NULL);
+                                                         ^~~~~~~~
+test.cpp:674:65: error: ‘RAX’ was not declared in this scope
+               child_wrote += ptrace(PTRACE_PEEKUSER, child, 8 * RAX, NULL);
+                                                                 ^~~
+test.cpp:691:37: error: ‘struct user_regs_struct’ has no member named ‘rcx’; did you mean ‘ecx’?
+               long int flags = regs.rcx & 3;
+                                     ^~~

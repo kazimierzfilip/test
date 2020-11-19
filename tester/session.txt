@@ -1,0 +1,56 @@
+mikep at thinkpad in ~/projects/spr/checker/tester on master*
+$ sudo ./compile_and_install.sh         
+mikep at thinkpad in ~/projects/spr/checker/tester on master*
+$ cd /checker/
+mikep at thinkpad in /checker
+$ tree .
+.
+├── rundir
+├── test
+└── tests
+
+2 directories, 1 file
+mikep at thinkpad in /checker
+$ ls -lR .
+.:
+total 156
+drwxrwxrwx 2 root root   4096 Dec  6 20:20 rundir
+-rwsr-sr-x 1 root root 150224 Dec  6 20:20 test
+drwxrwxrwx 2 root root   4096 Dec  6 20:20 tests
+
+./rundir:
+total 0
+
+./tests:
+total 0
+mikep at thinkpad in /checker
+$ cd rundir/
+mikep at thinkpad in /checker/rundir
+$ cat > hello.cpp <<EOF
+#include <iostream>
+
+int main(){
+  std::cout << "Hello world!" << std::endl;
+  return 0;
+}
+EOF
+mikep at thinkpad in /checker/rundir
+$ g++ -static ./hello.cpp 
+mikep at thinkpad in /checker/rundir
+$ echo -n '' > tests/in.txt
+bash: tests/in.txt: No such file or directory
+mikep at thinkpad in /checker/rundir
+$ cd ../
+mikep at thinkpad in /checker
+$ echo -n '' > tests/in.txt
+mikep at thinkpad in /checker
+$ ./test -s 8000 -h 8000 -t 1 -o 1000
+end: ok
+time_user: 0.000000
+time_system: 0.001750
+syscalls_executed: 11
+returned_code: 0
+memory_usage: 2064
+mikep at thinkpad in /checker
+$ cat tests/out.txt 
+Hello world!
