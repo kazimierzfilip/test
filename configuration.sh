@@ -37,3 +37,11 @@ git config --global user.name "Kazimierz Filip"
 git config --global user.email "kazimierzfilipmail@gmail.com"
 
 git clone https://github.com/kazimierzfilip/test.git
+
+#ssh-keygen -t ed25519 -C "kazimierzfilipmail@gmail.com"
+
+#eval "$(ssh-agent -s)"
+
+#ssh-add ~/.ssh/id_ed25519
+
+#git remote set-url origin git@github.com:kazimierzfilip/test.git
