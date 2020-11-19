@@ -5,9 +5,9 @@ brightness=$(cat /sys/class/backlight/radeon_bl0/brightness)
 
 if [ $option = '+' ]
 then
-   let brightness=$brightness+1;
+   let brightness=$brightness+5;
 else
-   let brightness=$brightness-1;
+   let brightness=$brightness-5;
 fi
 
 #while [ true ]
