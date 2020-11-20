@@ -45,3 +45,12 @@ git clone https://github.com/kazimierzfilip/test.git
 #ssh-add ~/.ssh/id_ed25519
 
 #git remote set-url origin git@github.com:kazimierzfilip/test.git
+
+apt -y install gcc
+apt -y install g++
+
+python3 -m pip install pyelftools
+
+apt -y install openjdk-8-jdk/oldstable
+
+#
