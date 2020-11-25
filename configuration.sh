@@ -53,4 +53,6 @@ python3 -m pip install pyelftools
 
 apt -y install openjdk-8-jdk/oldstable
 
-#
+#apt -y install eric
+
+pip3 install qiling
