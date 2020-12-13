@@ -10,15 +10,25 @@ stepCount = 0
 
 
 def print_asm(ql, address, size):
-    global stepCount
-    stepCount+=1
     buf = ql.mem.read(address, size)
     for i in md.disasm(buf, address):
-        print(":: 0x%x:\t%s\t%s" %(i.address, i.mnemonic, i.op_str))
+        #print(":: 0x%x:\t%s\t%s" %(i.address, i.mnemonic, i.op_str))
+        global stepCount
+        stepCount+=1
 
 
 if __name__ == "__main__":
     ql = Qiling(["rootfs/bin/bubble.elf"], "rootfs")
+    ql.hook_code(print_asm)
+    ql.run()
+    print('Steps: ', stepCount)
+    stepCount = 0
+    ql = Qiling(["rootfs/bin/bubble2.elf"], "rootfs")
+    ql.hook_code(print_asm)
+    ql.run()
+    print('Steps: ', stepCount)
+    stepCount = 0
+    ql = Qiling(["rootfs/bin/bubble3.elf"], "rootfs")
     ql.hook_code(print_asm)
     ql.run()
     print('Steps: ', stepCount)

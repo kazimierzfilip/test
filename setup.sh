@@ -25,8 +25,8 @@ python3 -m pip install qiling
 
 apt -y install git
 
-git clone https://github.com/kazimierzfilip/test.git
+#git clone https://github.com/kazimierzfilip/test.git
 
-cd test
+#cd test
 
 python3 qilingdemo.py
