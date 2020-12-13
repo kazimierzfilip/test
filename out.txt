@@ -1,7 +1,12 @@
-Steps:  11037
-Steps:  11041
-Steps:  11041
-Steps:  11042
+
+pc=  0
+
+pc=  1254
+loop 3 Steps:  11042
 Blocks:  2568
+
+pc=  0
+
+pc=  1254
 Steps:  11042
-Blocks:  2568
+Blocks:  5136
