@@ -1,0 +1,348 @@
+   1              		.file	"testloop.cpp"
+   2              	# GNU C++14 (Debian 6.3.0-18+deb9u1) version 6.3.0 20170516 (i686-linux-gnu)
+   3              	#	compiled by GNU C version 6.3.0 20170516, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.
+   4              	# GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+   5              	# options passed:  -imultiarch i386-linux-gnu -D_GNU_SOURCE testloop.cpp
+   6              	# -mtune=generic -march=i686 -auxbase-strip testloop.s -g -O2 -fverbose-asm
+   7              	# options enabled:  -fPIC -fPIE -faggressive-loop-optimizations
+   8              	# -falign-labels -fasynchronous-unwind-tables -fauto-inc-dec
+   9              	# -fbranch-count-reg -fcaller-saves -fchkp-check-incomplete-type
+  10              	# -fchkp-check-read -fchkp-check-write -fchkp-instrument-calls
+  11              	# -fchkp-narrow-bounds -fchkp-optimize -fchkp-store-bounds
+  12              	# -fchkp-use-static-bounds -fchkp-use-static-const-bounds
+  13              	# -fchkp-use-wrappers -fcombine-stack-adjustments -fcommon -fcompare-elim
+  14              	# -fcprop-registers -fcrossjumping -fcse-follow-jumps -fdefer-pop
+  15              	# -fdelete-null-pointer-checks -fdevirtualize -fdevirtualize-speculatively
+  16              	# -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
+  17              	# -fexceptions -fexpensive-optimizations -fforward-propagate -ffunction-cse
+  18              	# -fgcse -fgcse-lm -fgnu-runtime -fgnu-unique -fguess-branch-probability
+  19              	# -fhoist-adjacent-loads -fident -fif-conversion -fif-conversion2
+  20              	# -findirect-inlining -finline -finline-atomics
+  21              	# -finline-functions-called-once -finline-small-functions -fipa-cp
+  22              	# -fipa-cp-alignment -fipa-icf -fipa-icf-functions -fipa-icf-variables
+  23              	# -fipa-profile -fipa-pure-const -fipa-ra -fipa-reference -fipa-sra
+  24              	# -fira-hoist-pressure -fira-share-save-slots -fira-share-spill-slots
+  25              	# -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
+  26              	# -fleading-underscore -flifetime-dse -flra-remat -flto-odr-type-merging
+  27              	# -fmath-errno -fmerge-constants -fmerge-debug-strings
+  28              	# -fmove-loop-invariants -fomit-frame-pointer -foptimize-sibling-calls
+  29              	# -foptimize-strlen -fpartial-inlining -fpcc-struct-return -fpeephole
+  30              	# -fpeephole2 -fplt -fprefetch-loop-arrays -free -freorder-blocks
+  31              	# -freorder-functions -frerun-cse-after-loop
+  32              	# -fsched-critical-path-heuristic -fsched-dep-count-heuristic
+  33              	# -fsched-group-heuristic -fsched-interblock -fsched-last-insn-heuristic
+  34              	# -fsched-rank-heuristic -fsched-spec -fsched-spec-insn-heuristic
+  35              	# -fsched-stalled-insns-dep -fschedule-fusion -fschedule-insns2
+  36              	# -fsemantic-interposition -fshow-column -fshrink-wrap -fsigned-zeros
+  37              	# -fsplit-ivs-in-unroller -fsplit-wide-types -fssa-backprop -fssa-phiopt
+  38              	# -fstdarg-opt -fstrict-aliasing -fstrict-overflow
+  39              	# -fstrict-volatile-bitfields -fsync-libcalls -fthread-jumps
+  40              	# -ftoplevel-reorder -ftrapping-math -ftree-bit-ccp -ftree-builtin-call-dce
+  41              	# -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop -ftree-cselim
+  42              	# -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre
+  43              	# -ftree-loop-if-convert -ftree-loop-im -ftree-loop-ivcanon
+  44              	# -ftree-loop-optimize -ftree-parallelize-loops= -ftree-phiprop -ftree-pre
+  45              	# -ftree-pta -ftree-reassoc -ftree-scev-cprop -ftree-sink -ftree-slsr
+  46              	# -ftree-sra -ftree-switch-conversion -ftree-tail-merge -ftree-ter
+  47              	# -ftree-vrp -funit-at-a-time -funwind-tables -fvar-tracking
+  48              	# -fvar-tracking-assignments -fverbose-asm -fzero-initialized-in-bss -m32
+  49              	# -m80387 -m96bit-long-double -malign-stringops
+  50              	# -mavx256-split-unaligned-load -mavx256-split-unaligned-store
+  51              	# -mfancy-math-387 -mfp-ret-in-387 -mglibc -mieee-fp -mlong-double-80
+  52              	# -mno-red-zone -mno-sse4 -mpush-args -msahf -mstv -mtls-direct-seg-refs
+  53              	# -mvzeroupper
+  54              	
+  55              		.text
+  56              	.Ltext0:
+  57              		.section	.text.startup,"ax",@progbits
+  58              		.p2align 4,,15
+  59              		.globl	main
+  61              	main:
+  62              	.LFB8172:
+  63              		.file 1 "testloop.cpp"
+   1:testloop.cpp  **** #include <bits/stdc++.h> 
+   2:testloop.cpp  **** using namespace std; 
+   3:testloop.cpp  ****   
+   4:testloop.cpp  **** int main()  
+   5:testloop.cpp  **** {  
+  64              		.loc 1 5 0
+  65              		.cfi_startproc
+  66              	.LVL0:
+  67 0000 8D4C2404 		leal	4(%esp), %ecx	#,
+  68              		.cfi_def_cfa 1, 0
+  69 0004 83E4F0   		andl	$-16, %esp	#,
+  70 0007 FF71FC   		pushl	-4(%ecx)	#
+  71 000a 55       		pushl	%ebp	#
+  72              		.cfi_escape 0x10,0x5,0x2,0x75,0
+  73 000b 89E5     		movl	%esp, %ebp	#,
+  74 000d 53       		pushl	%ebx	#
+  75 000e 51       		pushl	%ecx	#
+  76              		.cfi_escape 0xf,0x3,0x75,0x78,0x6
+  77              		.cfi_escape 0x10,0x3,0x2,0x75,0x7c
+  78 000f E8FCFFFF 		call	__x86.get_pc_thunk.bx	#
+  78      FF
+  79 0014 81C30200 		addl	$_GLOBAL_OFFSET_TABLE_, %ebx	# tmp87,
+  79      0000
+   6:testloop.cpp  ****     int i;
+   7:testloop.cpp  ****     int sum = 0;
+   8:testloop.cpp  ****     for (i = 0; i < 1000; i++)  
+   9:testloop.cpp  ****         sum += 1;
+  10:testloop.cpp  ****     cout << sum;
+  80              		.loc 1 10 0
+  81 001a 83EC08   		subl	$8, %esp	#,
+  82 001d 68E80300 		pushl	$1000	#
+  82      00
+  83 0022 FFB30000 		pushl	_ZSt4cout@GOT(%ebx)	#
+  83      0000
+  84 0028 E8FCFFFF 		call	_ZNSolsEi@PLT	#
+  84      FF
+  85              	.LVL1:
+  86 002d 83C410   		addl	$16, %esp	#,
+  11:testloop.cpp  ****     return 0;  
+  12:testloop.cpp  **** }  ...
+  87              		.loc 1 12 0
+  88 0030 8D65F8   		leal	-8(%ebp), %esp	#,
+  89 0033 31C0     		xorl	%eax, %eax	#
+  90 0035 59       		popl	%ecx	#
+  91              		.cfi_restore 1
+  92              		.cfi_def_cfa 1, 0
+  93 0036 5B       		popl	%ebx	#
+  94              		.cfi_restore 3
+  95 0037 5D       		popl	%ebp	#
+  96              		.cfi_restore 5
+  97 0038 8D61FC   		leal	-4(%ecx), %esp	#,
+  98              		.cfi_def_cfa 4, 4
+  99 003b C3       		ret
+ 100              		.cfi_endproc
+ 101              	.LFE8172:
+ 103 003c 8D742600 		.p2align 4,,15
+ 105              	_GLOBAL__sub_I_main:
+ 106              	.LFB9305:
+ 107              		.loc 1 12 0
+ 108              		.cfi_startproc
+ 109              	.LVL2:
+ 110 0040 56       		pushl	%esi	#
+ 111              		.cfi_def_cfa_offset 8
+ 112              		.cfi_offset 6, -8
+ 113 0041 53       		pushl	%ebx	#
+ 114              		.cfi_def_cfa_offset 12
+ 115              		.cfi_offset 3, -12
+ 116 0042 E8FCFFFF 		call	__x86.get_pc_thunk.bx	#
+ 116      FF
+ 117 0047 81C30200 		addl	$_GLOBAL_OFFSET_TABLE_, %ebx	# tmp87,
+ 117      0000
+ 118 004d 83EC10   		subl	$16, %esp	#,
+ 119              		.cfi_def_cfa_offset 28
+ 120              	.LBB4:
+ 121              	.LBB5:
+ 122              		.file 2 "/usr/include/c++/6/iostream"
+   1:/usr/include/c++/6/iostream **** // Standard iostream objects -*- C++ -*-
+   2:/usr/include/c++/6/iostream **** 
+   3:/usr/include/c++/6/iostream **** // Copyright (C) 1997-2016 Free Software Foundation, Inc.
+   4:/usr/include/c++/6/iostream **** //
+   5:/usr/include/c++/6/iostream **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:/usr/include/c++/6/iostream **** // software; you can redistribute it and/or modify it under the
+   7:/usr/include/c++/6/iostream **** // terms of the GNU General Public License as published by the
+   8:/usr/include/c++/6/iostream **** // Free Software Foundation; either version 3, or (at your option)
+   9:/usr/include/c++/6/iostream **** // any later version.
+  10:/usr/include/c++/6/iostream **** 
+  11:/usr/include/c++/6/iostream **** // This library is distributed in the hope that it will be useful,
+  12:/usr/include/c++/6/iostream **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:/usr/include/c++/6/iostream **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:/usr/include/c++/6/iostream **** // GNU General Public License for more details.
+  15:/usr/include/c++/6/iostream **** 
+  16:/usr/include/c++/6/iostream **** // Under Section 7 of GPL version 3, you are granted additional
+  17:/usr/include/c++/6/iostream **** // permissions described in the GCC Runtime Library Exception, version
+  18:/usr/include/c++/6/iostream **** // 3.1, as published by the Free Software Foundation.
+  19:/usr/include/c++/6/iostream **** 
+  20:/usr/include/c++/6/iostream **** // You should have received a copy of the GNU General Public License and
+  21:/usr/include/c++/6/iostream **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:/usr/include/c++/6/iostream **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:/usr/include/c++/6/iostream **** // <http://www.gnu.org/licenses/>.
+  24:/usr/include/c++/6/iostream **** 
+  25:/usr/include/c++/6/iostream **** /** @file include/iostream
+  26:/usr/include/c++/6/iostream ****  *  This is a Standard C++ Library header.
+  27:/usr/include/c++/6/iostream ****  */
+  28:/usr/include/c++/6/iostream **** 
+  29:/usr/include/c++/6/iostream **** //
+  30:/usr/include/c++/6/iostream **** // ISO C++ 14882: 27.3  Standard iostream objects
+  31:/usr/include/c++/6/iostream **** //
+  32:/usr/include/c++/6/iostream **** 
+  33:/usr/include/c++/6/iostream **** #ifndef _GLIBCXX_IOSTREAM
+  34:/usr/include/c++/6/iostream **** #define _GLIBCXX_IOSTREAM 1
+  35:/usr/include/c++/6/iostream **** 
+  36:/usr/include/c++/6/iostream **** #pragma GCC system_header
+  37:/usr/include/c++/6/iostream **** 
+  38:/usr/include/c++/6/iostream **** #include <bits/c++config.h>
+  39:/usr/include/c++/6/iostream **** #include <ostream>
+  40:/usr/include/c++/6/iostream **** #include <istream>
+  41:/usr/include/c++/6/iostream **** 
+  42:/usr/include/c++/6/iostream **** namespace std _GLIBCXX_VISIBILITY(default)
+  43:/usr/include/c++/6/iostream **** {
+  44:/usr/include/c++/6/iostream **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  45:/usr/include/c++/6/iostream **** 
+  46:/usr/include/c++/6/iostream ****   /**
+  47:/usr/include/c++/6/iostream ****    *  @name Standard Stream Objects
+  48:/usr/include/c++/6/iostream ****    *
+  49:/usr/include/c++/6/iostream ****    *  The &lt;iostream&gt; header declares the eight <em>standard stream
+  50:/usr/include/c++/6/iostream ****    *  objects</em>.  For other declarations, see
+  51:/usr/include/c++/6/iostream ****    *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/io.html
+  52:/usr/include/c++/6/iostream ****    *  and the @link iosfwd I/O forward declarations @endlink
+  53:/usr/include/c++/6/iostream ****    *
+  54:/usr/include/c++/6/iostream ****    *  They are required by default to cooperate with the global C
+  55:/usr/include/c++/6/iostream ****    *  library's @c FILE streams, and to be available during program
+  56:/usr/include/c++/6/iostream ****    *  startup and termination. For more information, see the section of the
+  57:/usr/include/c++/6/iostream ****    *  manual linked to above.
+  58:/usr/include/c++/6/iostream ****   */
+  59:/usr/include/c++/6/iostream ****   //@{
+  60:/usr/include/c++/6/iostream ****   extern istream cin;		/// Linked to standard input
+  61:/usr/include/c++/6/iostream ****   extern ostream cout;		/// Linked to standard output
+  62:/usr/include/c++/6/iostream ****   extern ostream cerr;		/// Linked to standard error (unbuffered)
+  63:/usr/include/c++/6/iostream ****   extern ostream clog;		/// Linked to standard error (buffered)
+  64:/usr/include/c++/6/iostream **** 
+  65:/usr/include/c++/6/iostream **** #ifdef _GLIBCXX_USE_WCHAR_T
+  66:/usr/include/c++/6/iostream ****   extern wistream wcin;		/// Linked to standard input
+  67:/usr/include/c++/6/iostream ****   extern wostream wcout;	/// Linked to standard output
+  68:/usr/include/c++/6/iostream ****   extern wostream wcerr;	/// Linked to standard error (unbuffered)
+  69:/usr/include/c++/6/iostream ****   extern wostream wclog;	/// Linked to standard error (buffered)
+  70:/usr/include/c++/6/iostream **** #endif
+  71:/usr/include/c++/6/iostream ****   //@}
+  72:/usr/include/c++/6/iostream **** 
+  73:/usr/include/c++/6/iostream ****   // For construction of filebuffers for cout, cin, cerr, clog et. al.
+  74:/usr/include/c++/6/iostream ****   static ios_base::Init __ioinit;
+ 123              		.loc 2 74 0
+ 124 0050 8DB30000 		leal	_ZStL8__ioinit@GOTOFF(%ebx), %esi	#, tmp88
+ 124      0000
+ 125 0056 56       		pushl	%esi	# tmp88
+ 126              		.cfi_def_cfa_offset 32
+ 127 0057 E8FCFFFF 		call	_ZNSt8ios_base4InitC1Ev@PLT	#
+ 127      FF
+ 128              	.LVL3:
+ 129 005c 8D830000 		leal	__dso_handle@GOTOFF(%ebx), %eax	#, tmp89
+ 129      0000
+ 130 0062 83C40C   		addl	$12, %esp	#,
+ 131              		.cfi_def_cfa_offset 20
+ 132 0065 50       		pushl	%eax	# tmp89
+ 133              		.cfi_def_cfa_offset 24
+ 134 0066 56       		pushl	%esi	# tmp88
+ 135              		.cfi_def_cfa_offset 28
+ 136 0067 FFB30000 		pushl	_ZNSt8ios_base4InitD1Ev@GOT(%ebx)	#
+ 136      0000
+ 137              		.cfi_def_cfa_offset 32
+ 138 006d E8FCFFFF 		call	__cxa_atexit@PLT	#
+ 138      FF
+ 139              	.LVL4:
+ 140              	.LBE5:
+ 141              	.LBE4:
+ 142              		.loc 1 12 0
+ 143 0072 83C414   		addl	$20, %esp	#,
+ 144              		.cfi_def_cfa_offset 12
+ 145 0075 5B       		popl	%ebx	#
+ 146              		.cfi_restore 3
+ 147              		.cfi_def_cfa_offset 8
+ 148 0076 5E       		popl	%esi	#
+ 149              		.cfi_restore 6
+ 150              		.cfi_def_cfa_offset 4
+ 151 0077 C3       		ret
+ 152              		.cfi_endproc
+ 153              	.LFE9305:
+ 155              		.section	.init_array,"aw"
+ 156              		.align 4
+ 157 0000 40000000 		.long	_GLOBAL__sub_I_main
+ 158              		.local	_ZStL8__ioinit
+ 159              		.comm	_ZStL8__ioinit,1,1
+ 160              		.section	.text.__x86.get_pc_thunk.bx,"axG",@progbits,__x86.get_pc_thunk.bx,comdat
+ 161              		.globl	__x86.get_pc_thunk.bx
+ 162              		.hidden	__x86.get_pc_thunk.bx
+ 164              	__x86.get_pc_thunk.bx:
+ 165              	.LFB9306:
+ 166              		.cfi_startproc
+ 167 0000 8B1C24   		movl	(%esp), %ebx	#,
+ 168 0003 C3       		ret
+ 169              		.cfi_endproc
+ 170              	.LFE9306:
+ 171              		.text
+ 172              	.Letext0:
+ 173              		.file 3 "/usr/include/c++/6/clocale"
+ 174              		.file 4 "/usr/include/c++/6/cmath"
+ 175              		.file 5 "/usr/include/c++/6/csetjmp"
+ 176              		.file 6 "/usr/include/c++/6/csignal"
+ 177              		.file 7 "/usr/include/c++/6/cstdarg"
+ 178              		.file 8 "/usr/include/c++/6/cstddef"
+ 179              		.file 9 "/usr/include/c++/6/cstdio"
+ 180              		.file 10 "/usr/include/c++/6/cstdlib"
+ 181              		.file 11 "/usr/include/c++/6/cstring"
+ 182              		.file 12 "/usr/include/c++/6/ctime"
+ 183              		.file 13 "/usr/include/c++/6/cwchar"
+ 184              		.file 14 "/usr/include/c++/6/bits/exception_ptr.h"
+ 185              		.file 15 "/usr/include/i386-linux-gnu/c++/6/bits/c++config.h"
+ 186              		.file 16 "/usr/include/c++/6/type_traits"
+ 187              		.file 17 "/usr/include/c++/6/bits/stl_pair.h"
+ 188              		.file 18 "/usr/include/c++/6/debug/debug.h"
+ 189              		.file 19 "/usr/include/c++/6/bits/char_traits.h"
+ 190              		.file 20 "/usr/include/c++/6/cstdint"
+ 191              		.file 21 "/usr/include/c++/6/new"
+ 192              		.file 22 "/usr/include/c++/6/bits/basic_string.h"
+ 193              		.file 23 "/usr/include/c++/6/complex"
+ 194              		.file 24 "/usr/include/c++/6/chrono"
+ 195              		.file 25 "/usr/include/c++/6/system_error"
+ 196              		.file 26 "/usr/include/c++/6/bits/ios_base.h"
+ 197              		.file 27 "/usr/include/c++/6/cwctype"
+ 198              		.file 28 "/usr/include/c++/6/fenv.h"
+ 199              		.file 29 "/usr/include/c++/6/cfenv"
+ 200              		.file 30 "/usr/include/c++/6/cinttypes"
+ 201              		.file 31 "/usr/include/c++/6/cuchar"
+ 202              		.file 32 "/usr/include/c++/6/bits/algorithmfwd.h"
+ 203              		.file 33 "/usr/include/c++/6/bits/stl_algo.h"
+ 204              		.file 34 "/usr/include/c++/6/bits/uses_allocator.h"
+ 205              		.file 35 "/usr/include/c++/6/tuple"
+ 206              		.file 36 "/usr/include/c++/6/functional"
+ 207              		.file 37 "/usr/include/c++/6/iosfwd"
+ 208              		.file 38 "/usr/include/c++/6/bits/uniform_int_dist.h"
+ 209              		.file 39 "/usr/include/c++/6/bits/regex_automaton.h"
+ 210              		.file 40 "/usr/include/c++/6/bits/shared_ptr_base.h"
+ 211              		.file 41 "/usr/include/c++/6/ratio"
+ 212              		.file 42 "/usr/include/c++/6/bits/std_mutex.h"
+ 213              		.file 43 "/usr/include/c++/6/condition_variable"
+ 214              		.file 44 "/usr/include/c++/6/mutex"
+ 215              		.file 45 "/usr/include/c++/6/bits/random.h"
+ 216              		.file 46 "/usr/include/c++/6/bits/regex_constants.h"
+ 217              		.file 47 "/usr/include/c++/6/bits/atomic_base.h"
+ 218              		.file 48 "/usr/include/c++/6/bits/regex_error.h"
+ 219              		.file 49 "/usr/include/c++/6/bits/predefined_ops.h"
+ 220              		.file 50 "/usr/include/c++/6/ext/new_allocator.h"
+ 221              		.file 51 "/usr/include/c++/6/ext/numeric_traits.h"
+ 222              		.file 52 "/usr/include/c++/6/ext/concurrence.h"
+ 223              		.file 53 "/usr/include/i386-linux-gnu/bits/types.h"
+ 224              		.file 54 "/usr/include/errno.h"
+ 225              		.file 55 "/usr/include/locale.h"
+ 226              		.file 56 "/usr/include/i386-linux-gnu/bits/mathdef.h"
+ 227              		.file 57 "/usr/include/math.h"
+ 228              		.file 58 "/usr/include/i386-linux-gnu/bits/setjmp.h"
+ 229              		.file 59 "/usr/include/i386-linux-gnu/bits/sigset.h"
+ 230              		.file 60 "/usr/include/setjmp.h"
+ 231              		.file 61 "/usr/include/signal.h"
+ 232              		.file 62 "/usr/lib/gcc/i686-linux-gnu/6/include/stddef.h"
+ 233              		.file 63 "/usr/lib/gcc/i686-linux-gnu/6/include/stdarg.h"
+ 234              		.file 64 "/usr/include/stdio.h"
+ 235              		.file 65 "/usr/include/libio.h"
+ 236              		.file 66 "/usr/include/wchar.h"
+ 237              		.file 67 "/usr/include/_G_config.h"
+ 238              		.file 68 "/usr/include/i386-linux-gnu/bits/sys_errlist.h"
+ 239              		.file 69 "/usr/include/i386-linux-gnu/bits/stdio.h"
+ 240              		.file 70 "/usr/include/stdlib.h"
+ 241              		.file 71 "/usr/include/time.h"
+ 242              		.file 72 "/usr/include/i386-linux-gnu/sys/types.h"
+ 243              		.file 73 "/usr/include/i386-linux-gnu/bits/stdlib-float.h"
+ 244              		.file 74 "/usr/include/i386-linux-gnu/bits/stdlib-bsearch.h"
+ 245              		.file 75 "/usr/include/string.h"
+ 246              		.file 76 "/usr/include/stdint.h"
+ 247              		.file 77 "/usr/include/i386-linux-gnu/c++/6/bits/atomic_word.h"
+ 248              		.file 78 "/usr/include/wctype.h"
+ 249              		.file 79 "/usr/include/i386-linux-gnu/bits/fenv.h"
+ 250              		.file 80 "/usr/include/fenv.h"
+ 251              		.file 81 "/usr/include/inttypes.h"
+ 252              		.file 82 "/usr/include/uchar.h"
+ 253              		.file 83 "<built-in>"
+ 254              		.file 84 "/usr/include/c++/6/bits/ostream.tcc"
+ 255              		.file 85 "/usr/include/c++/6/future"

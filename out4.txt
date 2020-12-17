@@ -1,0 +1,9 @@
+loop Steps:  11051
+loop Steps2:  10946
+Blocks:  2570
+Steps:  11064
+loop Steps2:  10957
+Blocks:  2574
+Steps:  11073
+loop Steps2:  10965
+Blocks:  2576
