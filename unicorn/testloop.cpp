@@ -5,9 +5,9 @@ int main()
 {  
     int i,j;
     int sum = 0;
-    for (i = 0; i < 100; i++){
+    for (i = 0; i < 1000; i++){
        int sum2 = 0;
-       for (j = 0; j < 100; j++) {
+       for (j = 0; j < 1000; j++) {
         sum2 += 1;
        }
         sum += 1;
