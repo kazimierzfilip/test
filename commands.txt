@@ -1,0 +1,5 @@
+g++ -O0 empty.cpp -o ../rootfs/x86_linux/bin/empty.elf
+
+ldd ./simple3.elf
+
+readelf -d ./simple3.elf
