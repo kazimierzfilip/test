@@ -67,7 +67,7 @@ class stat:
 if __name__ == "__main__":
 
     stepCount = 0
-    ql = Qiling(["rootfs/x86_linux/bin/input1.elf"],
+    ql = Qiling(["rootfs/x86_linux/bin/alg.elf"],
                 "rootfs/x86_linux", stdin=Fake_stdin())
     ql.hook_code(hook)
     # ql.stdin.write(b'x')
